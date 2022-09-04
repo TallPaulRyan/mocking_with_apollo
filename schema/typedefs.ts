@@ -1,6 +1,5 @@
 import { gql } from 'apollo-server-express';
 
-
 export const typeDefs = gql`
     # Types
     type Book {
@@ -14,5 +13,7 @@ export const typeDefs = gql`
     }
 
     # Mutations
-
+    type Mutation {
+        createBook(title: String!, author: String!): Book!
+    }
  `

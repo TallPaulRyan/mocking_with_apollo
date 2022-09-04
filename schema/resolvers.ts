@@ -9,4 +9,11 @@ export const resolvers = {
             return books;
         },
     },
+    Mutation: {
+        createBook(parent: any, args: any) {
+            const newBook = args
+            books.push(newBook)
+            return newBook
+        }
+    }
 };
